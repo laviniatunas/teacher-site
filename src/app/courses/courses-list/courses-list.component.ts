@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';  
+import { Course } from '../courses.module';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-courses-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
   <section class="section">
     <div class="container">
@@ -14,7 +16,9 @@ import { CommonModule } from '@angular/common';
 
           <div class="card" ngClass="getColorClass(i)">
             <div class="card-content has-text-centered">
-              {{ course }}
+              <a routerLink="/courses/{{course.id}}">
+                {{ course.title }}
+              </a>
             </div>
           </div>
 
@@ -31,11 +35,11 @@ import { CommonModule } from '@angular/common';
   `
 })
 export class CoursesListComponent {
-  courses: string[] = ["Operating Systems", "Databases", "Cloud Computing", "Object Oriented Programming"];
+  courses: Course[] = [
+    {id: "os", title:"Operating Systems", description: "Description for OS"},
+    {id: "oop", title:"Object Oriented Programming", description: "Description for Object Oriented Programming"},
+    {id: "cloud", title:"Cloud Computing", description: "Description for Cloud Computin"},
+    {id: "db", title:"Databases", description: "Description for Databases"},
+  ]
 
-  getColorClass(index: number): string {
-    const colors = ['is-primary', 'is-link', 'is-info', 'is-success', 'is-warning', 'is-danger'];
-    const colorIndex = index % colors.length;
-    return colors[colorIndex];
-  }
 }

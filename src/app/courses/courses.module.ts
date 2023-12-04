@@ -12,3 +12,9 @@ import { CoursesRoutingModule } from './courses-routing.module';
   ]
 })
 export class CoursesModule { }
+
+export interface Course{
+  id: string;
+  title: string;
+  description: string;
+}
