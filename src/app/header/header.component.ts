@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
     <div class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" routerLink="/">Home</a>
+        <a class="navbar-item" routerLink="/courses">Teaching</a>
         <a class="navbar-item" routerLink="/contact">Contact</a>
       </div>
     </div>

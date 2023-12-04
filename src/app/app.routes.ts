@@ -6,10 +6,15 @@ import { HomeComponent } from './home/home.component';
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        pathMatch: 'full'
     },
     {
         path: 'contact',
         component: ContactComponent
+    },
+    {
+        path: 'courses',
+        loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule)
     }
 ];

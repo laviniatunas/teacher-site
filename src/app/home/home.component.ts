@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
           <img src="/assets/img/me.jpg" alt="Description of the image">
         </div>
         <div class="column">
-          <p>Your text goes here. It will be displayed next to the image.</p>
+          <p>Introduction text TBD</p>
         </div>
       </div>
     </div>
@@ -24,15 +24,6 @@ import { Component } from '@angular/core';
 </section>
   `,
   styles: [`
-  // .img{
-  //   position:relative;
-  //   overflow: hidden;
-  //   position: relative;
-  //   maxwidth: 360px; 
-  //   maxheight: 50px;
-  //   padding-top: 75%; 
-  // }
-
   .hero {
     background-image: url('/assets/img/home-page.jpg')!important;
     background-size: cover;
