@@ -5,6 +5,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noImplicitAny": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -16,9 +17,10 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "esnext",
     "useDefineForClassFields": false,
     "lib": [
+      "esnext",
       "ES2022",
       "dom"
     ]
