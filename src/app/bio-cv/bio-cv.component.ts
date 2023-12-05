@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <section class="section">
-    <div class="hero-body">
+    <div class="hero-body full-height">
       <div class="container">
         <div class="columns">
           <div class="column is-12">
