@@ -23,10 +23,10 @@ import { CommonModule } from '@angular/common';
       <!--- menu --->
       <div class="navbar-menu" [ngClass]="{ 'is-active': isNavbarActive }">
         <div class="navbar-end">
-          <a class="navbar-item" routerLink="/">Home</a>
-          <a class="navbar-item" routerLink="/courses">Teaching</a>
-          <a class="navbar-item" routerLink="/about-me">About Me</a>
-          <a class="navbar-item" routerLink="/contact">Contact</a>
+          <a class="navbar-item" routerLink="/" (click)="closeNavbar()">Home</a>
+          <a class="navbar-item" routerLink="/courses" (click)="closeNavbar()">Teaching</a>
+          <a class="navbar-item" routerLink="/about-me" (click)="closeNavbar()">About Me</a>
+          <a class="navbar-item" routerLink="/contact" (click)="closeNavbar()">Contact</a>
         </div>
       </div>
     </div>
@@ -38,5 +38,9 @@ export class HeaderComponent {
 
   toggleNavbar() {
     this.isNavbarActive = !this.isNavbarActive;
+  }
+
+  closeNavbar() {
+    this.isNavbarActive = false;
   }
 }
