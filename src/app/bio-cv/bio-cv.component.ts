@@ -8,19 +8,32 @@ import { Component } from '@angular/core';
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-6">
+          <div class="column is-12">
             <div class="content">
-              <h1 class="title is-2">Your Name</h1>
-              <h2 class="subtitle is-4">Job Title</h2>
-              <!-- Add more personal information as needed -->
+              <h1 class="title is-2">Țunaș Lavinia</h1>
+              <h2 class="subtitle is-4">Assistant Professor of Computer Science</h2>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
-              </p>
+              <div class="card">
+                <div class="card-content">
+                Hello, I'm Dr. Țunaș Lavinia, and I am thrilled to welcome you to the dynamic world of computer science! As an Assistant Professor specializing in Object-Oriented Programming (OOP), Databases, Cloud Computing, and Operating Systems, I am passionate about equipping students with the knowledge and skills needed to navigate the ever-evolving landscape of technology.
+                </div>
+                <div class="card-content">
+                  <p><strong>Courses Offered</strong></p>
+                  <ul class="list">
+                  <li class="list-item">Object Oriented Programming</li>
+                  <li class="list-item">Cloud Computing</li>
+                  <li class="list-item">Operating Systems</li>
+                  <li class="list-item">Databases</li>
+                  <!-- Add more list items as needed -->
+                </ul>
+                  <p><a routerLink="/courses">For more details check the courses page</a></p>
+
+                </div>
+              </div>
 
               <!-- Add more content as needed -->
 
-              <a href="/assets/your-cv.pdf" download="TunasLaviniaCV.pdf" class="button is-primary">Download CV (PDF)</a>
+              <a href="/assets/your-cv.pdf" download="TunasLaviniaCV.pdf" class="button is-primary" style="margin-top: 1rem;">Download CV (PDF)</a>
             </div>
           </div>
           <div class="column is-6">
