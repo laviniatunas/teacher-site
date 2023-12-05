@@ -1,0 +1,16 @@
+.section{
+  background-image: url('../../assets/img/sky.jpg')!important;
+}
+
+.full-height {
+  height: 100vh;
+  background-image: url('../../assets/img/sky.jpg') center center !important;
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  background-color: rgba(169, 169, 169, 0.7); // Adjust the alpha value (0.7 for example) for transparency
+  padding: 1rem; // Add padding to improve readability
+}
+
