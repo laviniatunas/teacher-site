@@ -1,0 +1,34 @@
+.section {
+  background-image: url('../../assets/img/contact.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-content {
+  background-color: rgba(169, 169, 169, 0.7); // Adjust the alpha value (0.7 for example) for transparency
+  padding: 1rem; // Add padding to improve readability
+}
+
+// In your component's stylesheet (e.g., home.component.scss)
+
+// Set the section to occupy full height
+.section {
+  height: 100vh;
+  width: 100%;
+  color: white;
+  h1 {
+    color: white;
+  }
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.label,
+.input,
+.textarea,
+.h1,
+.button {
+  color: white; /* Set text color to white */
+}

@@ -7,16 +7,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   template: `
-    <section class="hero is-primary is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">Get in touch with me!</h1>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
+      <h1 class="title">Get in touch with me!</h1>
         <form (ngSubmit)="submitForm()" #contactForm="ngForm" ngNativeValidate >
           <div class="field">
             <label class="label">Name</label>
@@ -38,7 +31,7 @@ import { CommonModule } from '@angular/common';
       </div>
     </section>
   `,
-  styles: ``
+  styleUrls: ['contact.component.scss'],
 })
 export class ContactComponent {
   name="";

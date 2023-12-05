@@ -29,11 +29,7 @@ import { CourseService } from '../../course.service';
     </div>
   </section>
   `,
-  styles: `
-  .card {
-    background-color: #ffc;
-  }
-  `
+  styleUrls: ['./courses-list.component.scss']
 })
 
 export class CoursesListComponent {

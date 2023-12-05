@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
       </div>
     </section>
   `,
-  styleUrls: ['./home.component.scss'] // Use styleUrls instead of stylesUrls
+  styleUrls: ['./home.component.scss'] 
 })
 export class HomeComponent {
 

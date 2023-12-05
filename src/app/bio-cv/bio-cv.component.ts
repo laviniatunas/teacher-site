@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <section class="section">
+    <div class="hero-body">
       <div class="container">
         <div class="columns">
           <div class="column is-12">
@@ -31,8 +32,6 @@ import { Component } from '@angular/core';
                 </div>
               </div>
 
-              <!-- Add more content as needed -->
-
               <a href="/assets/your-cv.pdf" download="TunasLaviniaCV.pdf" class="button is-primary" style="margin-top: 1rem;">Download CV (PDF)</a>
             </div>
           </div>
@@ -41,9 +40,10 @@ import { Component } from '@angular/core';
           </div>
         </div>
       </div>
+    </div>
     </section>
   `,
-  styles: ``
+  styleUrls: ['bio-cv.component.scss'],
 })
 export class BioCvComponent {
 
