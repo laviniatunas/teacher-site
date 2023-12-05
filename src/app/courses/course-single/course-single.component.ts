@@ -10,13 +10,23 @@ import { Course } from '../courses.module'
   template: `
     <section class="section">
       <div class="container">
-      <div class="card">
-      <div class="card-content">
-        <h2 class="title is-4">{{ course?.title }}</h2>
-        <p><strong>Description:</strong> {{ course?.description }}</p>
-        <p><strong>Grading System:</strong> {{ course?.grading_system }}</p>
-      </div>
-    </div>
+        <div class="card">
+          <div class="card-content has-background-info" >
+            <h2 class="title is-3">{{ course?.title }}</h2>
+          </div>
+          <div class="card-content has-background-light">
+            <h1 class="title is-4">Description:</h1>
+            <p>{{ course?.description }}</p>
+          </div>
+          <div class="card-content has-background-light">
+          <h1 class="title is-4">Requirements:</h1>
+          <p [innerHTML]=course?.requirements ></p>
+        </div>
+          <div class="card-content has-background-light">
+            <h1 class="title is-4">Grading System:</h1>
+            <p [innerHTML]=course?.grading_system ></p>
+          </div>
+        </div>
       </div> 
     </section>
   `,
