@@ -19,7 +19,7 @@ import { Course } from '../courses.module'
             <p>{{ course?.description }}</p>
           </div>
           <div class="card-content has-background-light">
-          <h1 class="title is-4">Requirements:</h1>
+          <h1 class="title is-4">Requirements & Graded Work:</h1>
           <p [innerHTML]=course?.requirements ></p>
         </div>
           <div class="card-content has-background-light">
