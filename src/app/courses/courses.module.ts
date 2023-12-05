@@ -17,4 +17,5 @@ export interface Course{
   id: string;
   title: string;
   description: string;
+  grading_system: string;
 }

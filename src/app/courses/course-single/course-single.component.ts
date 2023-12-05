@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CourseService } from '../../course.service';
 import { Course } from '../courses.module'
 
 @Component({
@@ -11,10 +12,9 @@ import { Course } from '../courses.module'
       <div class="container">
       <div class="card">
       <div class="card-content">
-        <h2 class="title is-4">Course Details</h2>
-        <p><strong>ID:</strong> {{ course.id }}</p>
-        <p><strong>Title:</strong> {{ course.title }}</p>
-        <p><strong>Description:</strong> {{ course.description }}</p>
+        <h2 class="title is-4">{{ course?.title }}</h2>
+        <p><strong>Description:</strong> {{ course?.description }}</p>
+        <p><strong>Grading System:</strong> {{ course?.grading_system }}</p>
       </div>
     </div>
       </div> 
@@ -23,20 +23,15 @@ import { Course } from '../courses.module'
   styles: ``
 })
 export class CourseSingleComponent {
-  course = {} as Course;
+  course = {} as Course | undefined;
   
-  constructor(private router: ActivatedRoute){}
+  constructor(private router: ActivatedRoute, private courseService: CourseService){}
 
   ngOnInit(){
     this.router.params.subscribe(params => {
-      const courseId = params['id']; //TODO
-      this.course = this.getCourseById(courseId.toString());
+      const courseId = params['id']; 
+      this.course = this.courseService.getCourseById(courseId);
     })
-    
   }
 
-  getCourseById(courseId: string): Course {
-    // Replace this with actual data fetching logic (e.g., from a service)
-    return { id: courseId, title: `Course ${courseId}`, description: `Description for Course ${courseId}.` };
-  }
 }
