@@ -38,12 +38,6 @@ import { CourseService } from '../../course.service';
 
 export class CoursesListComponent {
   courses: Course[] = [];
-  // courses: Course[] = [
-  //   {id: "os", title:"Operating Systems", description: "Description for OS"},
-  //   {id: "oop", title:"Object Oriented Programming", description: "Description for Object Oriented Programming"},
-  //   {id: "cloud", title:"Cloud Computing", description: "Description for Cloud Computin"},
-  //   {id: "db", title:"Databases", description: "Description for Databases"},
-  // ]
 
   constructor(private courseService: CourseService) { }
 
