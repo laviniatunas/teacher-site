@@ -5,31 +5,25 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-<section class="hero is-primary is-bold is-fullheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Welcome on my Page!
-      </h1>
-      <div class="columns is-mobile is-centered is-vcentered">
-        <div class="column">
-          <img src="/assets/img/me.jpg" alt="Description of the image">
-        </div>
-        <div class="column">
-          <p>Introduction text TBD</p>
+    <section class="hero is-primary is-bold is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Welcome on my Page!
+          </h1>
+          <div class="columns is-mobile is-centered is-vcentered">
+            <div class="column">
+              <img src="/assets/img/me.jpg" alt="Description of the image">
+            </div>
+            <div class="column">
+              <p>Introduction text TBD</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   `,
-  styles: [`
-  .hero {
-    background-image: url('/assets/img/home-page.jpg')!important;
-    background-size: cover;
-    background-position: center center;
-  }
-  `]
+  styleUrls: ['./home.component.scss'] // Use styleUrls instead of stylesUrls
 })
 export class HomeComponent {
 

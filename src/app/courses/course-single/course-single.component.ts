@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CourseService } from '../../course.service';
 import { Course } from '../courses.module'
 
 @Component({
@@ -9,34 +10,38 @@ import { Course } from '../courses.module'
   template: `
     <section class="section">
       <div class="container">
-      <div class="card">
-      <div class="card-content">
-        <h2 class="title is-4">Course Details</h2>
-        <p><strong>ID:</strong> {{ course.id }}</p>
-        <p><strong>Title:</strong> {{ course.title }}</p>
-        <p><strong>Description:</strong> {{ course.description }}</p>
-      </div>
-    </div>
+        <div class="card">
+          <div class="card-content has-background-info" >
+            <h2 class="title is-3">{{ course?.title }}</h2>
+          </div>
+          <div class="card-content has-background-light">
+            <h1 class="title is-4">Description:</h1>
+            <p>{{ course?.description }}</p>
+          </div>
+          <div class="card-content has-background-light">
+          <h1 class="title is-4">Requirements:</h1>
+          <p [innerHTML]=course?.requirements ></p>
+        </div>
+          <div class="card-content has-background-light">
+            <h1 class="title is-4">Grading System:</h1>
+            <p [innerHTML]=course?.grading_system ></p>
+          </div>
+        </div>
       </div> 
     </section>
   `,
   styles: ``
 })
 export class CourseSingleComponent {
-  course = {} as Course;
+  course = {} as Course | undefined;
   
-  constructor(private router: ActivatedRoute){}
+  constructor(private router: ActivatedRoute, private courseService: CourseService){}
 
   ngOnInit(){
     this.router.params.subscribe(params => {
-      const courseId = params['id']; //TODO
-      this.course = this.getCourseById(courseId.toString());
+      const courseId = params['id']; 
+      this.course = this.courseService.getCourseById(courseId);
     })
-    
   }
 
-  getCourseById(courseId: string): Course {
-    // Replace this with actual data fetching logic (e.g., from a service)
-    return { id: courseId, title: `Course ${courseId}`, description: `Description for Course ${courseId}.` };
-  }
 }

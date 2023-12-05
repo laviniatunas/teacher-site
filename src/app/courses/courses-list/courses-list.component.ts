@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 import { Course } from '../courses.module';
 import { RouterModule } from '@angular/router';
+import { CourseService } from '../../course.service';
 
 @Component({
   selector: 'app-courses-list',
@@ -34,12 +35,20 @@ import { RouterModule } from '@angular/router';
   }
   `
 })
+
 export class CoursesListComponent {
-  courses: Course[] = [
-    {id: "os", title:"Operating Systems", description: "Description for OS"},
-    {id: "oop", title:"Object Oriented Programming", description: "Description for Object Oriented Programming"},
-    {id: "cloud", title:"Cloud Computing", description: "Description for Cloud Computin"},
-    {id: "db", title:"Databases", description: "Description for Databases"},
-  ]
+  courses: Course[] = [];
+  // courses: Course[] = [
+  //   {id: "os", title:"Operating Systems", description: "Description for OS"},
+  //   {id: "oop", title:"Object Oriented Programming", description: "Description for Object Oriented Programming"},
+  //   {id: "cloud", title:"Cloud Computing", description: "Description for Cloud Computin"},
+  //   {id: "db", title:"Databases", description: "Description for Databases"},
+  // ]
+
+  constructor(private courseService: CourseService) { }
+
+  ngOnInit() {
+    this.courses = this.courseService.getCourses();
+  }
 
 }
