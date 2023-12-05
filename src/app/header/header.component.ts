@@ -25,6 +25,7 @@ import { CommonModule } from '@angular/common';
         <div class="navbar-end">
           <a class="navbar-item" routerLink="/">Home</a>
           <a class="navbar-item" routerLink="/courses">Teaching</a>
+          <a class="navbar-item" routerLink="/about-me">About Me</a>
           <a class="navbar-item" routerLink="/contact">Contact</a>
         </div>
       </div>
