@@ -25,14 +25,13 @@ import { Component } from '@angular/core';
                   <li class="list-item">Cloud Computing</li>
                   <li class="list-item">Operating Systems</li>
                   <li class="list-item">Databases</li>
-                  <!-- Add more list items as needed -->
                 </ul>
                   <p><a routerLink="/courses">For more details check the courses page</a></p>
 
                 </div>
               </div>
 
-              <a href="/assets/your-cv.pdf" download="TunasLaviniaCV.pdf" class="button is-primary" style="margin-top: 1rem;">Download CV (PDF)</a>
+              <a href="/assets/updated-cv.pdf" download="TunasLaviniaCV.pdf" class="button is-primary" style="margin-top: 1rem;">Download CV (PDF)</a>
             </div>
           </div>
           <div class="column is-6">
