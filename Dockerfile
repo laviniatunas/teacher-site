@@ -19,6 +19,8 @@ RUN npm run build
 # Use an official Nginx image as the base image for serving static files
 FROM nginx:alpine
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Copy the built Angular app from the builder stage to the Nginx public directory
 COPY --from=builder /app/dist /usr/share/nginx/html
 
