@@ -26,9 +26,12 @@
 }
 
 .label,
-.input,
-.textarea,
 .h1,
 .button {
   color: white; /* Set text color to white */
+}
+
+.textarea,
+.input {
+  color: black;
 }
