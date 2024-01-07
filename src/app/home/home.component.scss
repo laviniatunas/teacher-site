@@ -1,5 +1,35 @@
+/* home.component.scss */
+
 .hero {
-    background-image: url('../../assets/img/black.jpg')!important;
-    background-size: cover;
-    background-position: center center;
+  background-image: url('../../assets/img/black.jpg')!important;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-container {
+  width: 75%;
+}
+
+img {
+  transform: scale(0.6);
+}
+
+.home-image {
+  width: 50%;
+  height: auto;
+}
+
+.home-text {
+  font-size: 75%; /* Adjust the font size if needed */
+}
+
+@media screen and (max-width: 768px) {
+  .columns.is-mobile {
+    flex-direction: column-reverse; /* Reverse the order for smaller screens */
   }
+
+  .home-image,
+  .home-text {
+    width: 100%; /* Adjust the width for smaller screens */
+  }
+}
