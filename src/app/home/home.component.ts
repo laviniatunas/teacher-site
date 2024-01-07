@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
               <img src="/assets/img/me.jpg" alt="Description of the image">
             </div>
             <div class="column">
-              <p class="is-size-5"><strong>Hello there! I'm Ms. Țunaș Lavinia, your assistant teacher at the Faculty of Mathematics and Computer Science, Babeș-Bolyai University in Cluj-Napoca. I will be your guide on this educational journey. Within these virtual walls, we'll explore the exciting world of Computer Science.</strong></p>
+              <p class="is-size-7"><strong>Hello there! I'm Ms. Țunaș Lavinia, your assistant teacher at the Faculty of Mathematics and Computer Science, Babeș-Bolyai University in Cluj-Napoca. I will be your guide on this educational journey. Within these virtual walls, we'll explore the exciting world of Computer Science.</strong></p>
             </div>
           </div>
         </div>
